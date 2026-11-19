@@ -1,0 +1,7 @@
+/docs/chapters/
+/docs/index.md
+/mkdocs.yml
+/build-report.json
+/site/
+__pycache__/
+*.py[cod]
