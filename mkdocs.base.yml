@@ -1,0 +1,49 @@
+site_name: "Чемпионы ZED"
+site_description: "Champions of ZED — русский перевод, электронная книга"
+site_url: https://dexius9669.github.io/zero_edition/
+repo_url: https://github.com/dexius9669/zero_edition
+repo_name: dexius9669/zero_edition
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+theme:
+  name: material
+  language: ru
+  font: false
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Светлая тема
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Тёмная тема
+plugins:
+  - search:
+      lang: ru
+markdown_extensions:
+  - tables
+  - md_in_html
+  - attr_list
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      toc_depth: 2-3
+extra_css:
+  - assets/extra.css
+extra_javascript:
+  - assets/table-focus.js
