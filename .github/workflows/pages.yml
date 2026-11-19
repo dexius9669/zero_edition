@@ -28,6 +28,11 @@ jobs:
         run: python -m unittest discover -s tests -v
       - name: Build static HTML
         run: mkdocs build --strict
+      - name: Verify that Pages contains the book, not README
+        run: |
+          test -s site/index.html
+          test -s site/chapters/introduction/index.html
+          grep -q 'coz-title' site/index.html
       - if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
